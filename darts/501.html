@@ -8,9 +8,9 @@
     <title>Game Counter</title>
 </head>
 
-<body>
+<body onload="hideInputFields(), show()">
     <h1>Darts 501</h1>
-    <select name="player" id="player">
+    <select name="player" id="player" onchange="showItems()">
         <option value="one">1</option>
         <option value="two">2</option>
         <option value="three">3</option>
@@ -18,20 +18,20 @@
         <option value="five">5</option>
       </select>
 
-    <h2>Player1</h2>
-    <input type="text" name="player1" class="player_input">
-    <h2>Player2</h2>
-    <input type="text" name="player2" class="player_input">
-    <h2>Player3</h2>
-    <input type="text" name="player3" class="player_input">
-    <h2>Player4</h2>
-    <input type="text" name="player4" class="player_input">
-    <h2>Player5</h2>
-    <input type="text" name="player5" class="player_input">
+    <h2 class="playerText" id="p1_text">Player1</h2>
+    <input type="text" name="player1" class="player_input" id="input_player1">
+    <h2 class="playerText" id="p2_text">Player2</h2>
+    <input type="text" name="player2" class="player_input" id="input_player2">
+    <h2 class="playerText" id="p3_text">player3</h2>
+    <input type="text" name="player3" class="player_input" id="input_player3">
+    <h2 class="playerText" id="p4_text">player4</h2>
+    <input type="text" name="player4" class="player_input" id="input_player4">
+    <h2 class="playerText" id="p5_text">Player5</h2>
+    <input type="text" name="player5" class="player_input" id="input_player5">
     <br>
     <button>submit</button>
 
-
+    <script type="text/javascript " src="show_players.js"></script>
 </body>
 
 </html>
