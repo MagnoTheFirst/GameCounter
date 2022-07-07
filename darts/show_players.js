@@ -66,3 +66,23 @@ function showItems() {
         alert("Error")
     }
 }
+
+function loadText(input) {
+    if (input == "input_player1") {
+        var p1 = document.getElementById("input_player1").value;
+        document.getElementById("p1_text").innerHTML = p1;
+
+    } else if (input == "input_player2") {
+        var p2 = document.getElementById("input_player2").value;
+        document.getElementById("p2_text").innerHTML = p2;
+    } else if (input == "input_player3") {
+        var p3 = document.getElementById("input_player3").value;
+        document.getElementById("p3_text").innerHTML = p3;
+    } else if (input == "input_player4") {
+        var p4 = document.getElementById("input_player4").value;
+        document.getElementById("p4_text").innerHTML = p4;
+    } else {
+        alert("error");
+    }
+
+}
