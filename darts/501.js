@@ -53,3 +53,25 @@ function checkInput(input, points) {
         return true;
     }
 }
+
+function loadPlayer() {
+    var playerInfo = decodeURIComponent(document.cookie);
+    let ca = playerInfo.split(';');
+    alert(ca);
+    for (let i = 0; i < ca.length; i++) {
+
+        let c = ca[i];
+        console.log(c);
+        var player = "p" + i + "_name";
+        console.log(player);
+        document.getElementById(player).textContent = c;
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+
+}

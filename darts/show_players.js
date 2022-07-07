@@ -71,7 +71,6 @@ function loadText(input) {
     if (input == "input_player1") {
         var p1 = document.getElementById("input_player1").value;
         document.getElementById("p1_text").innerHTML = p1;
-
     } else if (input == "input_player2") {
         var p2 = document.getElementById("input_player2").value;
         document.getElementById("p2_text").innerHTML = p2;
@@ -85,4 +84,21 @@ function loadText(input) {
         alert("error");
     }
 
+}
+
+function saveCookies() {
+    var p1Text = document.getElementById("input_player1").value;
+    var p2Text = document.getElementById("input_player2").value;
+    var p3Text = document.getElementById("input_player3").value;
+    var p4Text = document.getElementById("input_player4").value;
+    var p5Text = document.getElementById("input_player5").value;
+
+    document.cookie = "p1=" + p1Text + "; ";
+    document.cookie = "p2=" + p2Text + "; ";
+    document.cookie = "p3=" + p3Text + "; ";
+    document.cookie = "p4=" + p4Text + "; ";
+    document.cookie = "p5=" + p5Text + "; ";
+    alert(document.cookie);
+
+    window.location = "game_counter_501.html";
 }
