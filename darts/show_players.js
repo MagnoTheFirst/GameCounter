@@ -87,6 +87,8 @@ function loadText(input) {
 }
 
 function saveCookies() {
+
+    document.cookie = "";
     var p1Text = document.getElementById("input_player1").value;
     var p2Text = document.getElementById("input_player2").value;
     var p3Text = document.getElementById("input_player3").value;
@@ -97,7 +99,7 @@ function saveCookies() {
     document.cookie = "p2=" + p2Text + "; ";
     document.cookie = "p3=" + p3Text + "; ";
     document.cookie = "p4=" + p4Text + "; ";
-    document.cookie = "p5=" + p5Text + "; ";
+
     alert(document.cookie);
 
     window.location = "game_counter_501.html";

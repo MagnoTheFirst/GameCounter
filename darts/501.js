@@ -59,18 +59,16 @@ function loadPlayer() {
     let ca = playerInfo.split(';');
     alert(ca);
     for (let i = 0; i < ca.length; i++) {
-
         let c = ca[i];
         console.log(c);
-        var player = "p" + i + "_name";
-        console.log(player);
-        document.getElementById(player).textContent = c;
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
+        var counter = i + 1;
+        var player = "p" + i + "_name" + "=" + c;
+        alert("_________________ " + player);
+        var playersub = "p" + i + "=";
+        alert(playersub);
+        var playername = c.replace(playersub, " ");
+        console.log("******************" + playername);
+        document.getElementById(player).textContent = playername;
     }
     return "";
 
